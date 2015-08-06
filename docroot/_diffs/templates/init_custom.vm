@@ -25,6 +25,13 @@ This file allows you to override and define new Velocity variables.
 #set($footerArticleId = $theme.getSetting("footerArticleId"))
 #set($footerContent = $journalContentUtil.getContent($systemGroupId, "$footerArticleId", null, "$locale", $theme_display))
 
+#* -------------------------- static-social-bookmark-------------------------- *#
+#set($staticSocialBookmarId = $theme.getSetting("staticSocialBookmarId"))
+#set($staticSocialBookmarkContent = $journalContentUtil.getContent($systemGroupId, "$staticSocialBookmarId", null, "$locale", $theme_display))
+
+#* -------------------------- custom logo -------------------------- *#
+#set($customDKLogo = $theme.getSetting("customDKLogo"))
+#set($customDKLogoContent = $journalContentUtil.getContent($getterUtil.getLong($group_id), "$customDKLogo", null, "$locale", $theme_display))
 
 #if($permissionChecker.isOmniadmin())
 	#set($bIsOmniAdmin = true)

@@ -27,7 +27,13 @@
 	#wrapper{
 		bottom: 70px !important;
 		padding-left: 1px !important;
-    		padding-right: 1px !important;
+    	padding-right: 1px !important;
+    	padding-top: 0px !important;
+	}
+	
+	.aui #content, #image-blocks{
+		bottom: 70px;
+		position: relative;
 	}
 
 
@@ -63,7 +69,7 @@
 	}
 	
 	.aui #heading .site-title img{
-		width: 110px; 
+		width: 100%; 
 		padding-top: 14px;
 	}
 	

@@ -5,6 +5,7 @@
 /*---------------- adjust font sizes  ----------------*/
 .aui body{
 	font-size: 12px;
+	max-width: 1440px;
 }
 
 .aui h1{
@@ -34,8 +35,10 @@
 
 /* -------------- wrapper --------------*/
 .aui #wrapper {
-	max-width: 1440px;
-	padding: 0px 5em 0px;}
+	padding-left: 1%;
+	padding-right: 1%;
+	max-width: 98%;
+}
 
 
 /* ---------- Word Wrapping ---------- */
@@ -73,8 +76,8 @@ h1[class="site-title"]{
 /* ---------- Logo ---------- */
 .logo{
     float:left;
-    width: 16%;
-    padding: 2% 0% 0% 0%;
+    width: 15%;
+    padding: 1% 0% 1% 0%;
     text-align: center;
     vertical-align: middle;}
 
@@ -85,7 +88,7 @@ h1[class="site-title"]{
   width: 100%;
   height: 37px;
   font-size: 2em;
-  margin: 0px;
+  margin-top: 20px;
   text-align: center;
   vertical-align: middle;
 }
@@ -125,6 +128,35 @@ h1[class="site-title"]{
     z-index: 1;
     background-color: initial;
 }
+
+
+.static-social-bookmark{
+  float: right;
+  clear: right;
+  width: 16%;
+  text-align: right;
+  vertical-align: middle;
+  height: 25px;
+  margin-top: 44px;
+}
+  
+  
+.language-container{
+  	float: right;
+  	clear: right;
+  	width: 16%;
+  	height: 28px;
+  	line-height: 28px;
+  	max-height: 28px;
+  	text-align: right;
+  	vertical-align: middle;
+ }
+  
+.language-container .portlet-borderless-container{
+  	min-height: 0px;
+  	padding: 0px;
+  	margin: 0px;
+}
   
   
 /* ++++++++++++++++
@@ -147,7 +179,7 @@ h1[class="site-title"]{
 }
 
 #center-image-block {
-	width: 67%;
+	width: 66%;
 	float: right;
 	margin-right: 1%;
 }
@@ -156,7 +188,6 @@ h1[class="site-title"]{
 	width: 15%;
 	float: right;
 	margin-right: 1%;
-	
 }
 
 #left-image-block img, #right-image-block img, #center-image-block img{
@@ -330,41 +361,6 @@ h1[class="site-title"]{
 #footer{
   text-align: right;
 }
-
-/*Quick and dirty solution for PA-1169: don't show footer in header but keep it there*/
-
-div #header-content-container .politaktiv-theme-footer{
-  text-align: center;
-  visibility: hidden;
-}
-
-div #header-content-container .politaktiv-theme-footer table td{
-  padding: 0px;
-}
-
-div #header-content-container .politaktiv-theme-footer ul{
-  display: inline-block;
-  list-style-type: none;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-}
-
-div #header-content-container .politaktiv-theme-footer ul li{
-  float: left;
-  color: #000000;
-  font-size: 11px;
-  font-weight: bold;
-  margin: 0px 15px 0px 15px;
-}
-
-div #header-content-container .politaktiv-theme-footer ul li a{
-  text-decoration: none;
-  color: #000000;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
 
 /*default footer styles*/
 div.politaktiv-theme-footer{

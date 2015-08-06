@@ -28,11 +28,16 @@ $theme.include($body_top_include)
 		    <div id="site-title"> 
 	
 			<h1 class="site-title">
-				<a id="pa-logo" class="$logo_css_class" href="https://www.heilbronn.de/" title="Zur Stadtseite Heilbronn wechseln">
-					<img alt="$logo_description"  src="$images_folder/_custom/logo.png"  />
+				<a id="pa-logo" class="$logo_css_class" href="$company_url" title="#language_format ("go-to-x", [$site_name])">
+				
+					#if($customDKLogo)
+						$customDKLogoContent
+					#else 
+						<img alt="$logo_description"  src="$images_folder/_custom/logo.png"  />
+					#end
 	
 					#if ($show_site_name)
-						<span class="site-name" title="Zur Stadtseite Heilbronn wechseln">
+						<span class="site-name" title="#language_format ("go-to-x", [$site_name])">
 							$site_name 
 						</span>
 					#end
@@ -40,15 +45,30 @@ $theme.include($body_top_include)
 			</h1>
 		   </div>			
   		   <div id="header-content-container">
-  		   
-  		   		$footerContent
-		   
+  		  
 		      	<h2 class="header-content">
 		        	<span>$community_name</span>
 		      	</h2>	    
 		 	<nav id="breadcrumbs">#breadcrumbs()</nav>
 
 		   </div>
+		   
+		   <div class="static-social-bookmark">
+	     		<span> $staticSocialBookmarkContent </span>
+		   </div>
+		   
+		             
+		   <div class="language-container">
+		   		#set ($VOID = $velocityPortletPreferences.reset())
+		  		#set($void = $velocityPortletPreferences.setValue('displayStyle', '0'))
+				#set($void = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
+				#* $languages defined in WEB-INF/liferay-look-and-feel.xml. *#
+				#set($languages = $theme.getSetting("languages"))
+				#set($void = $velocityPortletPreferences.setValue('languageIds', $languages))      
+		        $theme.runtime('82', '', $velocityPortletPreferences.toString())
+	       </div>
+	       
+		</div>
 		        
 		</div>
 		

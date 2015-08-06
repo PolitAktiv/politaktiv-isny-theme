@@ -18,8 +18,12 @@
 	}
 	.aui #wrapper{
 		bottom: 70px !important;
-		padding-left: 1px;
-    	padding-right: 1px;
+		padding: 1px;
+	}
+	
+	.aui #content, #image-blocks{
+		bottom: 70px;
+		position: relative;
 	}
 
 /* ++++++++++++++++
@@ -58,18 +62,19 @@
 		text-align: center;
 	}
 
-	.logo, .aui #heading .site-title{
-		width: 100px;
+	.logo{
+		width: 80%;
+		padding-left: 10%;
 	}
 
 	.aui #heading .site-title img{
-		width: 110px;
+		width: 100%;
 		padding-top: 14px;
 	}
 
 	#site-title{
-		padding-right: 14px;
-		padding-left: 14px;
+		width: 16%;
+		margin-left: 1%;
 	}
 
 	/*-------------- Header-Content-----------*/
@@ -119,6 +124,7 @@
 		background-image: none;
 		padding-left: 20px;
 	}
+	
 	
 /* ++++++++++++++++
 +++++++MAIN++++++++
