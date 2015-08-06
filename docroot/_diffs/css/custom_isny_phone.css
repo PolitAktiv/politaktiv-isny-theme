@@ -37,6 +37,10 @@
 		margin: 0px;
 	}
 	
+	.aui body > *{
+		padding-left: 0em;
+		padding-right: 0em;
+	}
 
 	#center-image-block {
 		width: 66%;

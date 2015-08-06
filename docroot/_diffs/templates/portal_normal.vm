@@ -165,13 +165,4 @@ $theme.include($bottom_include)
 
 </body>
 
-
-## break menu item text after "&"
-<script>
-$("a[role='menuitem'] span").each(function() {
-    var text = $(this).text();
-    text = text.replace("&", "&\n");
-    $(this).text(text);
-});
-</script>
 </html>

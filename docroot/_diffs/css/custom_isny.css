@@ -209,12 +209,51 @@ h1[class="site-title"]{
 
 .aui #navigation .navbar-inner{
 	min-height: 28px;
+	padding-left: 1px;
+	padding-right: 1px;
 }
   
 .aui #navigation li{
 	line-height: 16px;
-	padding: 1px 4px;
+	padding: 1px 1px;
 }
+
+.aui #navigation .navbar-inner{
+	background: none repeat scroll 0% 0% rgb(244, 244, 244);
+	border-top: 1px solid #CCC;
+}
+
+.aui #navigation .navbar-inner li a{
+	color: #000;
+	background: none repeat scroll 0% 0% rgb(244, 244, 244);
+}
+
+.aui #navigation .nav li.active > a{
+	background-color: #000;
+	background-image: none;
+	color: #FFF;
+}
+
+.aui #navigation .nav li > a:hover{
+	background-color: #000;
+	background-image: none;
+	color: #FFF;
+}
+
+.aui #navigation .nav .dropdown-menu{
+	background: none repeat scroll 0% 0% #FFF;
+}
+
+.aui #navigation .nav .dropdown-menu a{
+	color: #000;
+}
+
+.aui #navigation .nav .dropdown-menu a:hover{
+	background-color: #000;
+	background-image: none;
+	color: #FFF;
+}
+
 
 
 /* ++++++++++++++++
