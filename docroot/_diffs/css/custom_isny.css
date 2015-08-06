@@ -141,7 +141,13 @@ h1[class="site-title"]{
 }
 
 #left-image-block {
-	width: 84%;
+	width: 15%;
+	float: right;
+	margin-right: 1%;
+}
+
+#center-image-block {
+	width: 67%;
 	float: right;
 	margin-right: 1%;
 }
@@ -149,9 +155,11 @@ h1[class="site-title"]{
 #right-image-block {
 	width: 15%;
 	float: right;
+	margin-right: 1%;
+	
 }
 
-#left-image-block img, #right-image-block img{
+#left-image-block img, #right-image-block img, #center-image-block img{
 	width: 100% !important;
 }
  

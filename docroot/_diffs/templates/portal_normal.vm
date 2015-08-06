@@ -63,6 +63,16 @@ $theme.include($body_top_include)
 				#set ($rightImageBlockId = "56_INSTANCE_${instanceId}")      
 				$theme.runtime($rightImageBlockId, '', $velocityPortletPreferences.toString())
 	    		</div>
+	    		
+	    	<div id="center-image-block">
+				#* ---------- Set preferences for left webcontent portlet. ------------ *#
+				#set ($VOID = $velocityPortletPreferences.reset())
+				#set($void = $velocityPortletPreferences.setValue('displayStyle', '0'))
+				#set($void = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
+				#set ($instanceId = 'M1DD13')
+				#set ($centerImageBlockId = "56_INSTANCE_${instanceId}")      
+				$theme.runtime($centerImageBlockId, '', $velocityPortletPreferences.toString())
+	    		</div>
 
 
 			<div id="left-image-block">
