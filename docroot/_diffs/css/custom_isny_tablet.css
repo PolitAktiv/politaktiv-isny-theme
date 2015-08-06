@@ -21,23 +21,6 @@
 		padding: 1px;
 	}
 	
-	.aui #content, #image-blocks{
-		bottom: 70px;
-		position: relative;
-		margin: 0px;
-	}
-	
-	#center-image-block {
-		width: 66%;
-		float: right;
-		margin-right: 1%;
-	}
-
-	#right-image-block {
-		width: 15%;
-		float: right;
-		margin-right: 1%;
-	}
 	
 	.aui #content{
 	    padding: 0px;
@@ -123,6 +106,29 @@
 		height: 20px; /*(==63-23-20)*/
 	} 
 
+/* ++++++++++++++++
+++++++IMAGE++++++++
++++++++BlOCK+++++++
++++++++++++++++++*/
+
+	.aui #content, #image-blocks{
+		bottom: 70px;
+		position: relative;
+		margin: 0px;
+	}
+	
+	#center-image-block {
+		width: 66%;
+		float: right;
+		margin-right: 1%;
+	}
+
+	#right-image-block {
+		width: 15%;
+		float: right;
+		margin-right: 1%;
+	}
+
 
 /* ++++++++++++++++
 ++++NAVIGATION+++++
@@ -145,6 +151,10 @@
 	.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
 		background-image: none;
 		padding-left: 20px;
+	}
+	
+	.aui #navigation.open {
+    	top: 70px;
 	}
 	
 	

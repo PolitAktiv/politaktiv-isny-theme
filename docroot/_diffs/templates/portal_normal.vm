@@ -10,7 +10,6 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 	$theme.include($top_head_include)
-		<link rel="shortcut icon" type="image/x-icon" href="$images_folder/_custom/favicon.ico" >
 </head>
 
 <body class="$css_class">
