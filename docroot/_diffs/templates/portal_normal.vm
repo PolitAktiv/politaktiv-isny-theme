@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+	$theme.include($top_head_include)
+		<link rel="shortcut icon" type="image/x-icon" href="$images_folder/_custom/favicon.ico" >
+</head>
+
+<body class="$css_class">
+
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#dockbar()
+
+<div class="container-fluid" id="wrapper">
+	<header id="banner" role="banner">	
+		<div id="heading">
+		
+		    <div id="site-title"> 
+	
+			<h1 class="site-title">
+				<a id="pa-logo" class="$logo_css_class" href="https://www.heilbronn.de/" title="Zur Stadtseite Heilbronn wechseln">
+					<img alt="$logo_description"  src="$images_folder/_custom/logo.png"  />
+	
+					#if ($show_site_name)
+						<span class="site-name" title="Zur Stadtseite Heilbronn wechseln">
+							$site_name 
+						</span>
+					#end
+				</a>
+			</h1>
+		   </div>			
+  		   <div id="header-content-container">
+  		   
+  		   		$footerContent
+		   
+		      	<h2 class="header-content">
+		        	<span>$community_name</span>
+		      	</h2>	    
+		 	<nav id="breadcrumbs">#breadcrumbs()</nav>
+
+		   </div>
+		        
+		</div>
+		
+		<div id="image-blocks">
+
+			<div id="right-image-block">
+				#* ---------- Set preferences for right webcontent portlet. ------------ *#
+				#set ($VOID = $velocityPortletPreferences.reset())
+				#set($void = $velocityPortletPreferences.setValue('displayStyle', '0'))
+				#set($void = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
+				#set ($instanceId = 'R1G8T')
+				#set ($rightImageBlockId = "56_INSTANCE_${instanceId}")      
+				$theme.runtime($rightImageBlockId, '', $velocityPortletPreferences.toString())
+	    		</div>
+
+
+			<div id="left-image-block">
+				#* ---------- Set preferences for left webcontent portlet. ------------ *#
+				#set ($VOID = $velocityPortletPreferences.reset())
+				#set($void = $velocityPortletPreferences.setValue('displayStyle', '0'))
+				#set($void = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
+				#set ($instanceId = 'L3FT')
+				#set ($leftImageBlockId = "56_INSTANCE_${instanceId}")      
+				$theme.runtime($leftImageBlockId, '', $velocityPortletPreferences.toString())
+	    		</div>
+	
+	
+	</div>	
+		
+	
+			#if ($has_navigation || $is_signed_in)
+				#parse ("$full_templates_path/navigation.vm")
+			#end
+
+	</header>
+
+
+	<div id="content">
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+	
+	#if ($canSetSmartphoneContent)
+		<div id="smartphone-content-control">			
+			<button id="smartphone-content-toggle" class"btn">
+				Smartphone-Content-Anzeige umschalten
+			</button> 
+			
+			<script>
+			document.getElementById('smartphone-content-toggle').onclick = function() {
+    			var div = document.getElementById('smartphone-exclusive-content-container');
+    			var t = document.getElementById('smartphone-help-text');
+   				if (div.style.display !== 'block') {
+        			div.style.display = 'block';
+        			t.style.display = 'block';
+    			}
+    			else {
+        			div.style.display = 'none';
+        			t.style.display = 'none';
+    			}
+			};
+			</script>
+		</div>
+	#end
+	<footer id="footer" role="contentinfo">
+		<span> $footerContent </span>
+	</footer>
+
+</div>
+
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+
+
+</body>
+
+
+## break menu item text after "&"
+<script>
+$("a[role='menuitem'] span").each(function() {
+    var text = $(this).text();
+    text = text.replace("&", "&\n");
+    $(this).text(text);
+});
+</script>
+</html>

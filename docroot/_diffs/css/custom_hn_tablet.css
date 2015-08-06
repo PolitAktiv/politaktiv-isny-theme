@@ -1,0 +1,219 @@
+@include respond-to(tablet){ 
+
+/* ++++++++++++++++
+++++++BASICS+++++++
++++++++++++++++++*/
+
+	.aui body {
+   		font-size: 12px;
+	}
+
+
+	/*rearrange wrapper and header positions*/
+	#wrapper, #heading{
+		position: relative !important;
+	}
+	#heading{
+		bottom: 0px !important;
+	}
+	.aui #wrapper{
+		bottom: 70px !important;
+		padding-left: 1px;
+    	padding-right: 1px;
+	}
+
+/* ++++++++++++++++
+++++++HEADER+++++++
++++++++++++++++++*/ 
+
+	/*set heights to 63px (== height of admin bar)*/
+	#wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container{ 
+		height: 63px;
+	}
+
+	/*set widths*/
+	#banner, #heading{
+		width: 100%;
+	}
+
+	#banner{
+		padding-bottom: 2px;
+	}
+
+	/*make headerbox float next to logo box*/
+	#site-title {
+		float: left;
+	}
+
+	/*hide not-used header contents*/
+	.language-container, .static-social-bookmark, .ist-topbar{
+		display:none;
+	}
+
+
+	/* ---------- Logo ---------- */
+
+	.logo{
+		padding: 0px;	
+		text-align: center;
+	}
+
+	.logo, .aui #heading .site-title{
+		width: 100px;
+	}
+
+	.aui #heading .site-title img{
+		width: 110px;
+		padding-top: 14px;
+	}
+
+	#site-title{
+		padding-right: 14px;
+		padding-left: 14px;
+	}
+
+	/*-------------- Header-Content-----------*/
+	.aui #breadcrumbs ul{
+		padding: 0px 0px 0px 0px;
+		max-height: 23px; /*(==63-20-20)*/
+		white-space: nowrap;
+	}
+	
+	.aui #banner .header-content{
+		max-height: 20px; /*(==63-23-20)*/
+		white-space: nowrap;
+		font-size: 2em;
+		font-weight: normal;
+		line-height: 20px;
+	}
+	
+	/*footer is used in header in this theme*/
+	#footer{
+		width: 100%
+	}
+
+	div.politaktiv-theme-footer{
+		height: 20px; /*(==63-23-20)*/
+	} 
+
+
+/* ++++++++++++++++
+++++NAVIGATION+++++
++++++++++++++++++*/ 
+
+	.aui #navigation .navbar-inner{
+		background:none repeat scroll 0% 0% rgb(85, 85, 85);
+	}
+
+
+	.aui #navigation{
+		position: absolute;
+		width: 99.95%;
+	}
+  
+	.aui #navigation li{
+		background-image: none;
+	}
+	
+	.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
+		background-image: none;
+		padding-left: 20px;
+	}
+	
+/* ++++++++++++++++
++++++++MAIN++++++++
++++++CONTENT+++++++
++++++++++++++++++*/
+
+	/*------ Content Boxes Tablet --------*/
+		
+	/*Change div order using flexbox
+	add webkit for support reasons */
+
+	/* set containers and order*/
+
+	.flex-container{
+
+		display: -webkit-inline-flex;
+		display: -moz-inline-flex;
+		display: inline-flex;	//use flexbox
+
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		flex-wrap: wrap;	//break when insufficiant space 
+	}
+
+	.aui .row-fluid .width8of12{
+		width: inherit;
+	    float: none;
+		-webkit-order: 1;
+		-moz-order: 1;
+		order: 1;	// first element, thus above
+		margin: 0px;
+		padding: 0px;
+    	}
+	
+	.aui .row-fluid .width2of12right{
+		width: 49%;
+		float: left;
+		margin: 0px;;
+		padding: 2px;
+
+		-webkit-order: 3;
+		-moz-order: 3;
+		order: 3;	// second element, thus below element 1
+	}
+	
+	.aui .row-fluid .width2of12left{
+		width: 49%;
+		float: left;
+		margin: 0px;
+		padding: 2px;
+
+		-webkit-order: 2;
+		-moz-order: 2;
+		order: 2;	// third element
+	}
+
+
+	/* set specified widths and margins */
+
+	 .aui .row-fluid .width5of12right, .aui .row-fluid .width5of12left {
+		width: 61.5%;
+		float: none;
+		margin: 0px;
+		padding: 2px;
+	 }
+	
+	
+	.aui .row-fluid .width3of12right, .aui .row-fluid .width3of12left{
+		width: 36.5%;
+		float: none;
+		margin: 0px;
+		padding: 2px;
+	} 
+	
+	.aui .row-fluid .width4of12left, .aui .row-fluid .width4of12right{
+		width: 49%; 
+		float: none;
+		margin: 0px;
+		padding: 2px;
+	}
+	
+
+/* ++++++++++++++++
+++++++OTHER++++++++
++++++++STYLES++++++
++++++++++++++++++*/ 
+
+	
+	/*empty columns also need space, remove padding*/
+	.portlet-column-content.empty {
+    	padding: 0px;
+	}
+	
+	/*show smarthphone-content-toogle on the very right of page*/
+	#smartphone-content-toggle{
+		margin-right: 0px;
+	}
+}

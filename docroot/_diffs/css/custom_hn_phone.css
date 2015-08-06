@@ -1,0 +1,247 @@
+
+
+@include respond-to(phone){ 
+
+/* ++++++++++++++++
+++++++BASICS+++++++
++++++++++++++++++*/
+
+	.aui body {
+   		 font-size: 12pt;
+   		 padding-left: 0px;
+   		 padding-right: 0px;
+	}
+
+    .aui .portlet-boundary{
+    	padding-top: 1px;
+    	padding-bottom: 1px;
+    }
+
+	/*rearrange wrapper and header positions*/
+	#wrapper, #heading{
+		position: relative !important;
+	}
+	#heading{
+		bottom: 0px !important;
+	}
+	#wrapper{
+		bottom: 70px !important;
+		padding-left: 1px !important;
+    		padding-right: 1px !important;
+	}
+
+
+/* ++++++++++++++++
+++++++HEADER+++++++
++++++++++++++++++*/ 
+
+	
+	/*set heights to 63px (== height of admin bar)*/
+	#wrapper, #banner, #heading, .site-title, #header-background-image, #header-content-container, .logo{
+		height: 63px;
+	}
+	
+	/*make headerbox float next to logo box*/
+	#site-title {
+		float: left;
+	}
+	
+	/*hide not-used header contents*/
+	.language-container, .static-social-bookmark, .ist-topbar{
+		display:none;
+	}
+	
+	
+	/* ---------- Logo ---------- */
+
+	.logo{
+		padding: 0px;	
+		text-align: center;
+	}
+	.logo, .aui #heading .site-title{
+		width: 100px;
+	}
+	
+	.aui #heading .site-title img{
+		width: 110px; 
+		padding-top: 14px;
+	}
+	
+	#site-title{
+		padding-right: 14px;
+		padding-left: 14px;
+	}
+	
+	/*-------------- Header-Content-----------*/
+	
+	.aui #breadcrumbs ul{
+		padding: 0px 0px 0px 0px;
+		max-height: 23px; /*(==63-20-20)*/
+		white-space: nowrap;  
+	}
+	
+	.aui #banner .header-content{
+		max-height: 20px; /*(==63-23-20)*/
+		min-width: 100%;
+		white-space: nowrap; 
+		font-size: 1.6em;
+		font-weight: normal;
+		line-height: 20px;
+	}
+	
+	#header-content-container{
+		max-width: inherit;
+		width: 450px; /*empirically fine value*/
+		padding-bottom: 2px;
+	}
+	
+	/*footer is used in header in this theme*/
+	div.politaktiv-theme-footer{
+		height: 20px; /*(==63-23-20)*/
+	} 
+	
+	div.politaktiv-theme-footer table tbody tr td:nth-child(2){
+ 		 width: 100%;
+	}
+	
+	div.politaktiv-theme-footer table tbody tr td:nth-child(1), div.politaktiv-theme-footer table tbody tr td:nth-child(3){
+ 		 display:none;
+	}
+	
+	/* Header positioning in vertical smartphone mode */	
+	@media (max-width: 600px) { /*empirically fine value --> makes the header-content-container jump into next line when device gets really small*/
+  		#header-content-container, div.politaktiv-theme-footer  {
+    		width:100%;
+    		height: auto;
+  		}
+  		#content{
+  			padding-top: 63px;
+  		}
+	}
+
+
+
+/* ++++++++++++++++
+++++NAVIGATION+++++
++++++++++++++++++*/
+  
+
+	.aui #navigation .navbar-inner{
+		background:none repeat scroll 0% 0% rgb(85, 85, 85);
+	}
+
+	.aui #navigation{
+		position: absolute;
+		width: 99.95%;
+	}
+	  
+	.aui #navigation li{
+		background-image: none;
+	}
+	
+	.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
+		background-image: none;
+		padding-left: 20px;
+	}
+	  
+	
+/* ++++++++++++++++
++++++++MAIN++++++++
++++++CONTENT+++++++
++++++++++++++++++*/
+	
+	/*reset custom layout columns */
+	
+	.aui .row-fluid .width5of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	 .aui .row-fluid .width5of12right{
+	 	width: auto;
+	 	float: left;
+	 	padding: 2px;
+	 }
+	
+	.aui .row-fluid .width3of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	.aui .row-fluid .width3of12right{
+		width: auto;
+		float: left;
+		padding: 2px;
+	} 
+	
+	.aui .row-fluid .width4of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	.aui .row-fluid .width4of12right{
+		width: auto;
+		float: left;
+		padding: 2px;
+	}
+
+	.aui .row-fluid .width8of12{
+		margin-left: initial;		
+		width: auto;
+		float: left;
+		padding: 2px;
+    }
+    
+    .aui .row-fluid .smartphone-only-content{
+		padding: 2px;
+    }
+    
+
+
+/* ++++++++++++++++
+++SMARTPHONE+++++++
++++++++EXCLUSIVE+++
++++++CONTENT+++++++
++++++++++++++++++*/ 
+	
+	/* show */
+	#smartphone-exclusive-content-container { 
+		display: block;
+	}
+	
+	/* hide boxes */
+	.aui .row-fluid .width2of12right, .aui .row-fluid .width2of12left{
+		width: 0px;
+		height: 0px;
+		margin: 0px;
+		padding: 0px;
+		display: none;
+	}
+	
+/* ++++++++++++++++
+++++++OTHER++++++++
++++++++STYLES++++++
++++++++++++++++++*/ 
+	
+	/*empty columns also need space, remove padding*/
+	.portlet-column-content.empty {
+    	padding: 0px;
+	}
+	
+	/*show smarthphone-content-toogle on the very right of page*/
+	#smartphone-content-toggle{
+		margin-right: 0px;
+	}
+	
+	/*move adminbar so that it does not overflow the content*/
+	.aui .dockbar{
+		left: -20px;
+	}
+	
+}
