@@ -32,7 +32,7 @@ $theme.include($body_top_include)
 					#if($customDKLogo)
 						$customDKLogoContent
 					#else 
-						<img alt="$logo_description"  src="$images_folder/_custom/logo.png"  />
+						<img alt="$logo_description"  src="$site_logo"  />
 					#end
 	
 					#if ($show_site_name)
