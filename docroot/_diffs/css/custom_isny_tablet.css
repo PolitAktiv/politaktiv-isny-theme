@@ -24,6 +24,23 @@
 	.aui #content, #image-blocks{
 		bottom: 70px;
 		position: relative;
+		margin: 0px;
+	}
+	
+	#center-image-block {
+		width: 66%;
+		float: right;
+		margin-right: 1%;
+	}
+
+	#right-image-block {
+		width: 15%;
+		float: right;
+		margin-right: 1%;
+	}
+	
+	.aui #content{
+	    padding: 0px;
 	}
 
 /* ++++++++++++++++
