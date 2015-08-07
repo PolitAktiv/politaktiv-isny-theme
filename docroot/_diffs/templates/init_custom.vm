@@ -27,7 +27,7 @@ This file allows you to override and define new Velocity variables.
 
 #* -------------------------- static-social-bookmark-------------------------- *#
 #set($staticSocialBookmarId = $theme.getSetting("staticSocialBookmarId"))
-#set($staticSocialBookmarkContent = $journalContentUtil.getContent($systemGroupId, "$staticSocialBookmarId", null, "$locale", $theme_display))
+#set($staticSocialBookmarkContent = $journalContentUtil.getContent($getterUtil.getLong($group_id), "$staticSocialBookmarId", null, "$locale", $theme_display))
 
 #* -------------------------- custom logo -------------------------- *#
 #set($customDKLogo = $theme.getSetting("customDKLogo"))

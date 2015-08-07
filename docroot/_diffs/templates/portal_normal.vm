@@ -29,7 +29,7 @@ $theme.include($body_top_include)
 			<h1 class="site-title">
 				<a id="pa-logo" class="$logo_css_class" href="$company_url" title="#language_format ("go-to-x", [$site_name])">
 				
-					#if($customDKLogo)
+					#if($customDKLogoContent)
 						$customDKLogoContent
 					#else 
 						<img alt="$logo_description"  src="$site_logo"  />
