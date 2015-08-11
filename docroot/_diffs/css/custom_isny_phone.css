@@ -92,6 +92,10 @@
 		white-space: nowrap;  
 	}
 	
+	.aui #breadcrumbs{
+		font-size: 0.5em;
+	}
+	
 	.aui #banner .header-content{
 		max-height: 20px; /*(==63-23-20)*/
 		min-width: 100%;
