@@ -161,11 +161,6 @@
 /* ++++++++++++++++
 ++++NAVIGATION+++++
 +++++++++++++++++*/
-  
-
-	.aui #navigation .navbar-inner{
-		background:none repeat scroll 0% 0% rgb(85, 85, 85);
-	}
 
 	.aui #navigation{
 		position: absolute;
@@ -184,6 +179,43 @@
 	.aui #navigation.open {
     	top: 70px;
 	}
+	
+		
+	.aui #navigation .navbar-inner{
+		background: none repeat scroll 0% 0% rgb(244, 244, 244);
+		border-top: 1px solid #CCC;
+	}
+
+	.aui #navigation .navbar-inner li a{
+		color: #000;
+	}	
+
+	.aui #navigation .nav li.active > a{
+		background-color: #118ADE;
+		background-image: none;
+		color: #FFF;
+	}
+	
+	.aui #navigation .nav li > a:hover{
+		background-color: #FFF;
+		color: #000;
+	}
+	
+	
+	.aui #navigation .nav .dropdown-menu a{
+		color: #FFF;
+		background-color: #118ADE;
+	}
+	
+	.aui #navigation .nav .dropdown-menu a:hover{
+		color: #000;
+		background-color: #FFF;
+	}
+	
+	.aui #navigation .nav .dropdown-menu{
+		background: #F4F4F4;
+	}
+	
 	  
 	
 /* ++++++++++++++++
