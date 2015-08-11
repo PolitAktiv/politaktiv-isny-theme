@@ -27,15 +27,13 @@
   font-size: 1.2em; }
   
 @font-face {
-	font-family: "Droid Sans";
-	src: url('fonts/web_fonts/droidsans_regular_macroman/DroidSans-webfont.eot');
-	src: url('fonts/web_fonts/droidsans_regular_macroman/DroidSans-webfont.eot?#iefix') format("embedded-opentype"), local('Droid Sans'), local('DroidSans'), url('fonts/web_fonts/droidsans_regular_macroman/DroidSans-webfont.woff'), url('fonts/web_fonts/droidsans_regular_macroman/DroidSans-webfont.ttf');
+	font-family: "Oswald-Light";
+	src: url('fonts/web_fonts/Oswald-Light.eot');
+	src: url('fonts/web_fonts/Oswald-Light.eot?#iefix') format("embedded-opentype"), local('Oswald-Light'), local('Oswald-Light'), url('fonts/web_fonts/Oswald-Light.woff'), url('fonts/web_fonts/Oswald-Light.ttf');
 }
 @font-face {
-	font-family: "Droid Sans";
-	font-weight: bold;
-	src: url('fonts/web_fonts/droidsans_bold_macroman/DroidSans-Bold-webfont.eot');
-	src:  url('fonts/web_fonts/droidsans_bold_macroman/DroidSans-Bold-webfont.eot?#iefix') format("embedded-opentype"), local('Droid Sans Bold'), local('DroidSans-Bold'), url('fonts/web_fonts/droidsans_bold_macroman/DroidSans-Bold-webfont.woff'), url('fonts/web_fonts/droidsans_bold_macroman/DroidSans-Bold-webfont.ttf');
+	font-family: "Oswald-ExtraLight";
+	src: local('Oswald-ExtraLight'), url('fonts/web_fonts/Oswald-ExtraLight.ttf');
 }
   
 
@@ -76,8 +74,8 @@ h1[class="site-title"]{
 /* ---------- Logo ---------- */
 .logo{
     float:left;
-    width: 15%;
-    padding: 1% 0% 1% 0%;
+    width: 11%;
+    padding: 2% 2% 2% 2%;
     text-align: center;
     vertical-align: middle;}
 
@@ -88,10 +86,11 @@ h1[class="site-title"]{
   width: 100%;
   height: 37px;
   font-size: 2em;
-  font-family: FontAwesome, Calibri, Droid Sans, sans-serif;
+  font-family: Oswald-Light, sans-serif;
   margin-top: 20px;
   text-align: center;
   vertical-align: middle;
+  font-weight: 200;
 }
 
 #header-content-container{
