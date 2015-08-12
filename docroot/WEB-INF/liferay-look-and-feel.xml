@@ -5,7 +5,7 @@
 	<compatibility>
 		<version>6.2.0+</version>
 	</compatibility>
-	<theme id="Politaktiv-isny" name="politaktiv-isny" >
+	<theme id="politaktiv-standard2" name="politaktiv-standard2" >
 		<settings>
 			<setting key="systemGroupId" value="10165" />
 			<setting key="istTopBarArticleId" value="SYSTEM_IST_TOP_BAR" />
