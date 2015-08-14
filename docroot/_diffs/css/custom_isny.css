@@ -86,11 +86,10 @@ h1[class="site-title"]{
   width: 100%;
   height: 37px;
   font-size: 2em;
-  font-family: Oswald-Light, sans-serif;
   margin-top: 20px;
   text-align: center;
   vertical-align: middle;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 #header-content-container{
@@ -206,12 +205,18 @@ h1[class="site-title"]{
     margin-bottom: 15px;
     position: relative;
     z-index: 1200;
+    font-family: Oswald-Light, sans-serif;	
 }  
 
 .aui #navigation .navbar-inner{
 	min-height: 28px;
 	padding-left: 1px;
 	padding-right: 1px;
+}
+
+.aui #navigation .nav > li > a{
+	padding-left: 10px;
+	padding-right: 10px;
 }
   
 .aui #navigation li{
@@ -224,26 +229,33 @@ h1[class="site-title"]{
 	border-top: 1px solid #CCC;
 }
 
+
 .aui #navigation .navbar-inner li a{
 	color: #000;
 }
 
+.aui #navigation .nav .dropdown-menu{
+	background: none repeat scroll 0% 0% #009AE5 !important;
+}
+
 .aui #navigation .nav li.active > a{
-	background-color: #000;
-	background-image: none;
+	background-image: linear-gradient(#118ADE 0px, #118ADE 47%, #1273C7 100%);
 	color: #FFF;
 }
 
-.aui #navigation .nav li > a:hover{
+.aui #navigation .nav .dropdown-menu li > a:hover{
 	background-color: #000;
-	background-image: none; 
+	background: #2FA4F5; 
 	color: #FFF;
 }
-
 
 
 .aui #navigation .nav .dropdown-menu a{
 	color: #FFF;
+}
+
+.aui #navigation .nav .dropdown-menu a:hover{
+	background-color: none repeat scroll 0% 0% #2FA4F5;
 }
 
 
